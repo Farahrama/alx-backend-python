@@ -24,7 +24,7 @@ class TestGithubOrgClient(unittest.TestCase):
         test_result = {"login": org_name}
         mock_get_json.return_value = test_result
         client = GithubOrgClient(org_name)
-        self.assertEqual(client.org, test_result)
+        self.assertEqual(client.org(), test_result)
         mock_get_json.assert_called_once_with(f"https://api.github.com/orgs/{org_name}")
 
     @patch('client.GithubOrgClient.org', new_callable=PropertyMock)
