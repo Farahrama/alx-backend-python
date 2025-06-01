@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Fixtures for integration tests"""
-
 TEST_PAYLOAD = {
     "org_payload": {"repos_url": "https://api.github.com/orgs/test-org/repos"},
     "repos_payload": [
